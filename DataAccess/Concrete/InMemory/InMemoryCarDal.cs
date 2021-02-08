@@ -1,5 +1,6 @@
 ﻿using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -85,6 +86,11 @@ namespace DataAccess.Concrete.InMemory
         }
 
         public void Delete(Car entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public CarDetailDto GetCarDetails()
         {
             throw new NotImplementedException();
         }

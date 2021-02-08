@@ -10,18 +10,29 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            CarManager carManager = new CarManager(new EFCarDal(), new EFBrandDal());
+            Car car = new Car { BrandId = 1, ColorId = 1, DailyPrice = 41231,
+                ModelYear = 1921, Description = "Mercedes" };
+            Brand brand = new Brand { Name = "Audi" };
+            Color color = new Color { Name = "Blue" };
 
-            Car carToAdd = new Car { BrandId = 1, ColorId = 1, DailyPrice = 1231, ModelYear = 2021, Description = "Mercedes" };
+            CarManager carManager = new CarManager(new EFCarDal());
+            BrandManager brandManager = new BrandManager(new EFBrandDal());
+            ColorManager colorManager = new ColorManager(new EFColorDal());
 
 
-            carManager.Add(carToAdd);
+            carManager.Add(car);
+            brandManager.Add(brand);
+            colorManager.Add(color);
 
             foreach (var carIter in carManager.GetAll())
             {
                 Console.WriteLine(carIter.Description);
             }
+
         }
+
+
+
 
         private static void Memory()
         {
@@ -29,7 +40,7 @@ namespace ConsoleUI
 
             Car carToUpdate = new Car { Id = 3, BrandId = 15, ColorId = 16, DailyPrice = 5555, ModelYear = 1980, Description = "Devrim" };
 
-            CarManager carManager = new CarManager(new InMemoryCarDal(), new EFBrandDal());
+            CarManager carManager = new CarManager(new InMemoryCarDal());
 
 
 
