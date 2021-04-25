@@ -24,14 +24,12 @@ namespace ConsoleUI
             brandManager.Add(brand);
             colorManager.Add(color);
 
-            foreach (var carIter in carManager.GetAll())
+            foreach (var carIter in carManager.GetAll().Data)
             {
                 Console.WriteLine(carIter.Description);
             }
 
         }
-
-
 
 
         private static void Memory()
@@ -47,7 +45,7 @@ namespace ConsoleUI
 
             Console.WriteLine("1. durum");
 
-            foreach (var carIter in carManager.GetAll())
+            foreach (var carIter in carManager.GetAll().Data)
             {
                 Console.WriteLine(carIter.Description);
             }
@@ -61,7 +59,7 @@ namespace ConsoleUI
 
             Console.WriteLine("2. durum");
 
-            foreach (var carIter in carManager.GetAll())
+            foreach (var carIter in carManager.GetAll().Data)
             {
                 Console.WriteLine(carIter.Description);
             }
