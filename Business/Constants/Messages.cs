@@ -6,39 +6,39 @@ namespace Business.Constants
 {
     public static class Messages
     {
-        public static string CarAdded = "Araba eklendi";
-        public static string CarDeleted = "Araba silindi";
-        public static string CarUpdated = "Araba güncellendi";
-        public static string CarsListed = "Arabalar listelendi";
-        public static string CarNameMinumumError = "Araba isminin uzunluğu en az 2 karakter olmalıdır";
-        public static string DailyPriceError = "Arabanın günlük fiyatı 0'dan az olamaz";
+        public const string CarAdded = "Araba eklendi";
+        public const string CarDeleted = "Araba silindi";
+        public const string CarUpdated = "Araba güncellendi";
+        public const string CarsListed = "Arabalar listelendi";
+        public const string CarNameMinumumError = "Araba isminin uzunluğu en az 2 karakter olmalıdır";
+        public const string DailyPriceError = "Arabanın günlük fiyatı 0'dan az olamaz";
 
 
-        public static string BrandAdded = "Marka eklendi";
-        public static string BrandDeleted = "Marka silindi";
-        public static string BrandUpdated = "Marka güncellendi";
-        public static string BrandsListed = "Markalar listelendi";
+        public const string BrandAdded = "Marka eklendi";
+        public const string BrandDeleted = "Marka silindi";
+        public const string BrandUpdated = "Marka güncellendi";
+        public const string BrandsListed = "Markalar listelendi";
 
 
-        public static string ColorAdded = "Renk eklendi";
-        public static string ColorDeleted = "Renk silindi";
-        public static string ColorUpdated = "Renk güncellendi";
-        public static string ColorsListed = "Renkler listelendi";
+        public const string ColorAdded = "Renk eklendi";
+        public const string ColorDeleted = "Renk silindi";
+        public const string ColorUpdated = "Renk güncellendi";
+        public const string ColorsListed = "Renkler listelendi";
 
-        public static string CustomerAdded = "Müşteri eklendi";
-        public static string CustomerDeleted = "Müşteri silindi";
-        public static string CustomerUpdated = "Müşteri güncellendi";
-        public static string CustomersListed = "Müşteriler listelendi";
+        public const string CustomerAdded = "Müşteri eklendi";
+        public const string CustomerDeleted = "Müşteri silindi";
+        public const string CustomerUpdated = "Müşteri güncellendi";
+        public const string CustomersListed = "Müşteriler listelendi";
 
-        public static string UserAdded = "Kullanıcı eklendi";
-        public static string UserDeleted = "Kullanıcı silindi";
-        public static string UserUpdated = "Kullanıcı güncellendi";
-        public static string UsersListed = "Kullanıcılar listelendi";
+        public const string UserAdded = "Kullanıcı eklendi";
+        public const string UserDeleted = "Kullanıcı silindi";
+        public const string UserUpdated = "Kullanıcı güncellendi";
+        public const string UsersListed = "Kullanıcılar listelendi";
 
-        public static string RentalAdded = "Kiralık araç eklendi";
-        public static string RentalDeleted = "Kiralık araç silindi";
-        public static string RentalUpdated = "Kiralık araç güncellendi";
-        public static string RentalsListed = "Kiralık araçlar listelendi";
-        public static string RentalNotAvailable = "Kiralık araç müsait değil";
+        public const string RentalAdded = "Kiralık araç eklendi";
+        public const string RentalDeleted = "Kiralık araç silindi";
+        public const string RentalUpdated = "Kiralık araç güncellendi";
+        public const string RentalsListed = "Kiralık araçlar listelendi";
+        public const string RentalNotAvailable = "Kiralık araç müsait değil";
     }
 }

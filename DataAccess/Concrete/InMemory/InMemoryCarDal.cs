@@ -11,7 +11,7 @@ namespace DataAccess.Concrete.InMemory
 {
     public class InMemoryCarDal : ICarDal
     {
-        List<Car> _cars;
+        readonly List<Car> _cars;
         public InMemoryCarDal()
         {
             _cars = new List<Car>
@@ -85,7 +85,7 @@ namespace DataAccess.Concrete.InMemory
             throw new NotImplementedException();
         }
 
-        public void Delete(Car entity)
+        public void Delete(Car car)
         {
             throw new NotImplementedException();
         }
