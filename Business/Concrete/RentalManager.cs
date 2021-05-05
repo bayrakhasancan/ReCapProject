@@ -38,7 +38,8 @@ namespace Business.Concrete
 
         public IDataResult<List<Rental>> GetAll()
         {
-            return new SuccessDataResult<List<Rental>>(Messages.RentalsListed, _rentalDal.GetAll());
+            var result = _rentalDal.GetAll();
+            return new SuccessDataResult<List<Rental>>(Messages.RentalsListed,result);
         }
 
         public IResult Update(Rental rental)

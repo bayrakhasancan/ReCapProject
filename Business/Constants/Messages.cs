@@ -40,5 +40,12 @@ namespace Business.Constants
         public const string RentalUpdated = "Kiralık araç güncellendi";
         public const string RentalsListed = "Kiralık araçlar listelendi";
         public const string RentalNotAvailable = "Kiralık araç müsait değil";
+
+
+        public const string CarImageAdded = "Araba resmi eklendi";
+        public const string CarImageDeleted = "Araba resmi silindi";
+        public const string CarImageUpdated = "Araba resmi güncellendi";
+        public const string CarImagesListed = "Araba resimleri listelendi";
+        public const string CarImageCountExceeded = "Bir arabanın en fazla 5 resmi olabilir";
     }
 }

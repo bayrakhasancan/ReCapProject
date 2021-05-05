@@ -1,5 +1,6 @@
 ﻿using Business.Abstract;
 using Entities.Concrete;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -10,19 +11,19 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UsersController : Controller
+    public class CarImagesController : Controller
     {
-        readonly IUserService _userService;
+        readonly ICarImageService _carImageService;
 
-        public UsersController(IUserService brandService)
+        public CarImagesController(ICarImageService carImageService)
         {
-            _userService = brandService;
+            _carImageService = carImageService;
         }
 
         [HttpPost("add")]
-        public IActionResult Add(User brand)
+        public IActionResult Add([FromForm] CarImage carImage, [FromForm(Name = "Image")] IFormFile formFile)
         {
-            var result = _userService.Add(brand);
+            var result = _carImageService.Add(carImage, formFile);
 
             if (result.Success)
             {
@@ -32,9 +33,9 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("delete")]
-        public IActionResult Delete(User brand)
+        public IActionResult Delete([FromForm] CarImage carImage)
         {
-            var result = _userService.Delete(brand);
+            var result = _carImageService.Delete(carImage);
 
             if (result.Success)
             {
@@ -46,7 +47,7 @@ namespace WebAPI.Controllers
         [HttpGet("getall")]
         public IActionResult GetAll()
         {
-            var result = _userService.GetAll();
+            var result = _carImageService.GetAll();
 
             if (result.Success)
             {
@@ -56,9 +57,9 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("update")]
-        public IActionResult Update(User brand)
+        public IActionResult Update([FromForm] CarImage carImage, [FromForm(Name = "Image")] IFormFile formFile)
         {
-            var result = _userService.Update(brand);
+            var result = _carImageService.Update(carImage, formFile);
 
             if (result.Success)
             {

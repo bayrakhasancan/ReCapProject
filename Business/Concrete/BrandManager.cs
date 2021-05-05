@@ -40,7 +40,8 @@ namespace Business.Concrete
 
         public IDataResult<List<Brand>> GetAll()
         {
-            return new SuccessDataResult<List<Brand>>(Messages.BrandsListed, _brandDal.GetAll());
+            var result = _brandDal.GetAll();
+            return new SuccessDataResult<List<Brand>>(Messages.BrandsListed, result);
         }
     }
 }

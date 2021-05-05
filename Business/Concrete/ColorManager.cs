@@ -39,7 +39,8 @@ namespace Business.Concrete
 
         public IDataResult<List<Color>> GetAll()
         {
-            return new SuccessDataResult<List<Color>>(Messages.ColorsListed, _colorDal.GetAll());
+            var result = _colorDal.GetAll();
+            return new SuccessDataResult<List<Color>>(Messages.ColorsListed, result);
         }
     }
 }
