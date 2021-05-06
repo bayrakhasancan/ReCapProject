@@ -47,5 +47,7 @@ namespace Business.Constants
         public const string CarImageUpdated = "Araba resmi güncellendi";
         public const string CarImagesListed = "Araba resimleri listelendi";
         public const string CarImageCountExceeded = "Bir arabanın en fazla 5 resmi olabilir";
+        internal static string CarImageFileSizeError = "Resim 5 mb'dan fazla olamaz";
+        internal static string CarImageExtensionError = "Resim uzantısı geçerli değil";
     }
 }
