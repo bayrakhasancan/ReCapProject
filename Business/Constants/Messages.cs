@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Core.Entities.Concrete;
+using Core.Utilities.Security.JWT;
+using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace Business.Constants
@@ -47,7 +50,14 @@ namespace Business.Constants
         public const string CarImageUpdated = "Araba resmi güncellendi";
         public const string CarImagesListed = "Araba resimleri listelendi";
         public const string CarImageCountExceeded = "Bir arabanın en fazla 5 resmi olabilir";
-        internal static string CarImageFileSizeError = "Resim 5 mb'dan fazla olamaz";
-        internal static string CarImageExtensionError = "Resim uzantısı geçerli değil";
+        public const string CarImageFileSizeError = "Resim 5 mb'dan fazla olamaz";
+        public const string CarImageExtensionError = "Resim uzantısı geçerli değil";
+        public const string AuthorizationDenied = "Yetkiniz yok";
+        public const string UserNotFound = "Kullanıcı bulunamadı";
+        public const string SuccessfulLogin = "Giriş başarılı";
+        public const string UserAlreadyExists = "Kullanıcı mevcut";
+        public const string PasswordError = "Parola hatası";
+        public const string UserRegistered = "Kullanıcı kaydı başarılı";
+        public const string AccessTokenCreated = "Erişim tokeni oluşturuldu";
     }
 }
